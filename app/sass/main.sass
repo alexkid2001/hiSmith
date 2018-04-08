@@ -1,0 +1,139 @@
+@import "fonts"
+@import "libs"
+@import "vars"
+
+*
+	-webkit-box-sizing: border-box
+	-moz-box-sizing: border-box
+	box-sizing: border-box
+	&:before, &:after
+		-webkit-box-sizing: border-box
+		-moz-box-sizing: border-box
+		box-sizing: border-box
+
+*::-webkit-input-placeholder
+	color: #666
+	opacity: 1
+
+*:-moz-placeholder
+	color: #666
+	opacity: 1
+
+*::-moz-placeholder
+	color: #666
+	opacity: 1
+
+*:-ms-input-placeholder
+	color: #666
+	opacity: 1
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+	color: #666
+body input:required:valid,
+body textarea:required:valid
+	color: #666
+
+html, body
+	height: 100%
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.65
+	font-family: $default-font
+	overflow-x: hidden
+	padding: 0
+	margin: 0
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+
+.text-center
+	text-align: center
+
+::selection
+	background-color: $accent
+	color: #fff
+
+.wrapper
+	min-height: 100vh
+	height: 100%
+
+
+.slider 
+	position: relative
+	height: 530px
+	background-color: #efefef
+	.owl-stage-outer
+		top: 50%
+		transform: translateY(-50%)
+	.owl-nav
+		button.owl-prev, button.owl-next
+			position: absolute	
+			top: 0
+			bottom: 0
+			margin-top: auto
+			margin-bottom: auto
+			height: 200px
+			width: 41px
+			background-color: #2b4989 
+			background-position: center center 
+			background-repeat: no-repeat
+			background-size: 
+			opacity: .1
+			&.disabled
+				display: none
+		button.owl-prev
+			left: 10px
+			background-image: url(../img/arrow-left.png)
+		button.owl-next
+			right: 10px	
+			background-image: url(../img/arrow-right.png)
+	.owl-dots
+		position: absolute
+		bottom: 0
+		height: 6px
+		width: 100%	
+		.owl-dot
+			width: 50%
+			margin: 0
+			padding: 0
+			background-color: #ececec
+			height: 100%
+			vertical-align: top
+			&.active
+				background-color: #2c4d89
+
+.slide_item
+	text-align: center
+	width: 100%
+	display: inline-block
+	float: left
+.left_chart
+	width: 350px
+	height: 300px
+	display: inline-block
+.right_chart
+	width: 250px
+	height: 300px
+	display: inline-block
+	canvas
+		height: 290px !important
+.center_chart
+	display: inline-block
+	width: 420px
+	height: 320px
+	canvas
+		height: 320px !important
+canvas
+	user-select: none
+	height: 300px !important
+
+
+
+
+@import "media" // Всегда в конце
